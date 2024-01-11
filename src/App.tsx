@@ -1,5 +1,7 @@
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
+import { Router } from "./Router";
 import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
 
@@ -8,8 +10,9 @@ export function App() {
     <>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyle />
-
-        <h1>Hello Word</h1>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </ThemeProvider>
     </>
   );
